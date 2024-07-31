@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  min-height: 100dvh;
+  overflow: hidden;
+}

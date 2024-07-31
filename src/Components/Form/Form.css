@@ -1,0 +1,33 @@
+.Form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0 0 5rem 0;
+    overflow: hidden;
+    width: 100dvw;
+    background-color: #000;
+}
+
+.Form .submit {
+    height: 3rem;
+    width: 16.5rem;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    font-family: "Arial";
+    outline: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.Form .submit:hover {
+    background-color: #1A2130;
+}
+
+.Form .submit:active {
+    border: none;
+}

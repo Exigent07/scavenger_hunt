@@ -1,0 +1,225 @@
+.Input {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Input .teamName,
+.Input .memberName,
+.Input .email,
+.Input .phone,
+.Input .flag,
+.Input .password {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Input .teamName .customPlaceholder,
+.Input .memberName .customPlaceholder,
+.Input .email .customPlaceholder,
+.Input .flag .customPlaceholder,
+.Input .phone .customPlaceholder,
+.Input .password .customPlaceholder {
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    font-size: 1rem;
+    font-family: 'Mulish';
+    font-weight: 400;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.Input .teamName input,
+.Input .memberName input,
+.Input .email input,
+.Input .flag input,
+.Input .phone input,
+.Input .password input {
+    border-radius: 2px;
+    width: 13.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 0 0.8rem 3rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.Input .teamName label,
+.Input .memberName label,
+.Input .flag label,
+.Input .email label,
+.Input .phone label,
+.Input .password label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.Input .teamName input:focus + .customPlaceholder,
+.Input .memberName input:focus + .customPlaceholder,
+.Input .email input:focus + .customPlaceholder,
+.Input .flag input:focus + .customPlaceholder,
+.Input .phone input:focus + .customPlaceholder,
+.Input .password input:focus + .customPlaceholder {
+    transform: translate(0, -1.5rem);
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.customPlaceholder.active {
+    transform: translate(0, -1.5rem) !important;
+    font-size: 0.8rem !important;
+    transition: all 0.5s ease;
+}
+
+.Input .teamName input:focus,
+.Input .memberName input:focus,
+.Input .flag input:focus,
+.Input .email input:focus,
+.Input .phone input:focus,
+.Input .password input:focus {
+    border-color: #1A2130;
+    outline: none;
+    border: 2px solid #1A2130;
+}
+
+.Input .teamName .teamNamePerson,
+.Input .memberName .memberNamePerson,
+.Input .email .emailSvg,
+.Input .flag .flagSvg,
+.Input .phone .phoneSvg,
+.Input .password .passwordSvg {
+    position: absolute;
+    height: 1.5rem;
+    transform: translate(0.8rem, 0);
+}
+
+.Input .InputHeader {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+}
+
+.Input .InputHeader h2 {
+    font-family: "Orbitron";
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+.Input .InputHeader p {
+    font-size: 1.18rem;
+    color: #202735;
+    font-family: "Mulish";
+    font-weight: 500;
+}
+
+.Input .submit {
+    position: relative;
+    height: 4.5rem;
+    width: 52.5rem;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Inter";
+    outline: none;
+    border: none;
+    margin-bottom: 8rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.Input .submit:hover {
+    background-color: #1A2130;
+}
+
+.Input .submit:active {
+    border: none;
+}
+
+@media (max-width: 899px) {
+    .Input {
+        gap: 1rem;
+    }
+
+    .Input .teamName input,
+    .Input .memberName input,
+    .Input .email input,
+    .Input .flag input,
+    .Input .phone input,
+    .Input .password input {
+        width: 15rem;
+        font-size: 1rem;
+        padding: 1rem 0 0.8rem 2.5rem;
+    }
+
+    .Input .InputHeader {
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .Input .InputHeader h2 {
+        font-size: 1.75rem;
+    }
+
+    .Input .InputHeader p {
+        font-size: 1.1rem;
+    }
+
+    .Input .submit {
+        height: 4rem;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Input {
+        gap: 1.5rem;
+    }
+
+    .Input .teamName input,
+    .Input .memberName input,
+    .Input .email input,
+    .Input .flag input,
+    .Input .phone input,
+    .Input .password input {
+        width: 20rem;
+        font-size: 1.1rem;
+        padding: 1rem 0 0.8rem 3rem;
+    }
+
+    .Input .InputHeader {
+        margin-left: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .Input .InputHeader h2 {
+        font-size: 2rem;
+    }
+
+    .Input .InputHeader p {
+        font-size: 1.2rem;
+    }
+
+    .Input .submit {
+        height: 4.5rem;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}

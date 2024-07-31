@@ -1,0 +1,101 @@
+.Home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    min-height: 100dvh;
+    width: 100dvw;
+    background-color: #000;
+}
+
+.Home .bi0sLogo img {
+    padding: 0;
+    margin: 0;
+    height: 8rem;
+}
+
+.Home .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 0 1rem 0;
+}
+
+.Home .buttons .submit {
+    height: 3rem;
+    width: 6.5rem;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    font-family: "Arial";
+    outline: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.Home .buttons .submit:hover {
+    background-color: #1A2130;
+}
+
+.Home .buttons .submit:active {
+    border: none;
+}
+
+.Home .buttons .submit.active {
+    color: #000;
+    background-color: white;
+}
+
+@media (max-width: 450px) {
+    .Home {
+        gap: 0.5rem;
+    }
+
+    .Home .bi0sLogo img {
+        height: 6rem;
+    }
+
+    .Home .buttons .submit {
+        height: 2.5rem;
+        width: 5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .Home {
+        gap: 1rem;
+    }
+
+    .Home .bi0sLogo img {
+        height: 7rem;
+    }
+
+    .Home .buttons .submit {
+        height: 2.75rem;
+        width: 5.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Home {
+        gap: 1.5rem;
+    }
+
+    .Home .bi0sLogo img {
+        height: 8rem;
+    }
+
+    .Home .buttons .submit {
+        height: 3rem;
+        width: 6.5rem;
+        font-size: 1.1rem;
+    }
+}
