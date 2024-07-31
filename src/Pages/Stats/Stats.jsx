@@ -16,7 +16,7 @@ const Stats = () => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const response = await axios.get('http://bore.pub:51500/api/stats', { withCredentials: true });
+                const response = await axios.get('https://scavenger-backend.onrender.com/api/stats', { withCredentials: true });
                 setSolvedLevels(response.data.solvedLevels);
                 setRules(response.data.rules);
             } catch (err) {
