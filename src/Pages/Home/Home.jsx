@@ -9,7 +9,8 @@ function Home() {
     const [loading, setLoading] = useState(true);
     const [formState, setFormState] = useState("login");
 
-    const BASE_URL = "http://bore.pub:10484";
+    const BASE_URL = "https://fdb9-223-227-118-0.ngrok-free.app";
+    axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;
 
     const checkSession = async () => {
         try {

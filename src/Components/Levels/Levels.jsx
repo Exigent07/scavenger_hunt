@@ -14,7 +14,8 @@ function Levels() {
     const [hint, setHint] = useState('');
     const [levels, setLevels] = useState([]);
 
-    const BASE_URL = "http://bore.pub:10484";
+    const BASE_URL = "https://fdb9-223-227-118-0.ngrok-free.app";
+    axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;
     const POLL_INTERVAL = 1000;
 
     useEffect(() => {

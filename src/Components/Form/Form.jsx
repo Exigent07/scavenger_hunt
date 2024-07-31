@@ -20,9 +20,10 @@ function Form({ type, onRegisterSuccess }) {
     const toastIdsRef = useRef([]);
     const navigate = useNavigate();
 
-    const BASE_URL = "http://bore.pub:10484";
+    const BASE_URL = "https://fdb9-223-227-118-0.ngrok-free.app";
 
     axios.defaults.withCredentials = true;
+    axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;
 
     const validateEmail = (email) => {
         const re = /\S+@\S+\.\S+/;

@@ -16,7 +16,8 @@ const Stats = () => {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const response = await axios.get('http://bore.pub:10484/api/stats', { withCredentials: true });
+                axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;
+                const response = await axios.get('https://fdb9-223-227-118-0.ngrok-free.app/api/stats', { withCredentials: true });
                 setSolvedLevels(response.data.solvedLevels);
                 setRules(response.data.rules);
             } catch (err) {

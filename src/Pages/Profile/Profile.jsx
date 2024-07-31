@@ -13,7 +13,8 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get('http://bore.pub:10484/api/profile', { withCredentials: true });
+                axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;
+                const response = await axios.get('https://fdb9-223-227-118-0.ngrok-free.app/api/profile', { withCredentials: true });
                 setProfile(response.data);
             } catch (err) {
                 setError('Failed to fetch profile');
@@ -32,7 +33,7 @@ const Profile = () => {
 
     const handleLogout = async () => {
         try {
-            await axios.post('http://bore.pub:10484/api/logout', {}, { withCredentials: true });
+            await axios.post('https://fdb9-223-227-118-0.ngrok-free.app/api/logout', {}, { withCredentials: true });
             toast.success("Logged out Successfully!");
             navigate('/');
         } catch (err) {
