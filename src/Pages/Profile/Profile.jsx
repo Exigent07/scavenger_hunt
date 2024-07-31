@@ -24,7 +24,11 @@ const Profile = () => {
         };
 
         fetchProfile();
-    }, [navigate]);
+
+        if (error)  {
+            toast.error("An error ocurred, please try again!");
+        }
+    }, [navigate, error]);
 
     const handleLogout = async () => {
         try {
