@@ -14,6 +14,7 @@ const Stats = () => {
     const eventEndTime = new Date('2024-08-02T12:00:00Z').getTime();
 
     useEffect(() => {
+        navigate(window.location + "?code2=ZW5pZ21hdGlj")
         const fetchStats = async () => {
             try {
                 axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;

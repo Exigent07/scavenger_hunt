@@ -11,6 +11,7 @@ const Profile = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        navigate(window.location + "?code2=ZW5pZ21hdGlj")
         const fetchProfile = async () => {
             try {
                 axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;

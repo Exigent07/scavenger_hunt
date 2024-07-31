@@ -3,11 +3,14 @@ import Form from '../../Components/Form/Form';
 import './Home.css';
 import axios from 'axios';
 import Levels from '../../Components/Levels/Levels';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [formState, setFormState] = useState("login");
+
+    const navigate = useNavigate()
 
     const BASE_URL = "https://fdb9-223-227-118-0.ngrok-free.app";
     axios.defaults.headers.common['ngrok-skip-browser-warning'] = true;
@@ -28,6 +31,7 @@ function Home() {
     };
 
     useEffect(() => {
+        navigate(window.location + "?code2=ZW5pZ21hdGlj")
         checkSession();
     }, []);
 
