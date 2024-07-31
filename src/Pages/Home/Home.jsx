@@ -9,7 +9,7 @@ function Home() {
     const [loading, setLoading] = useState(true);
     const [formState, setFormState] = useState("login");
 
-    const BASE_URL = "https://scavenger-backend.onrender.com";
+    const BASE_URL = "http://bore.pub:10484";
 
     const checkSession = async () => {
         try {

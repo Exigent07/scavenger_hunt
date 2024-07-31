@@ -20,7 +20,7 @@ function Form({ type, onRegisterSuccess }) {
     const toastIdsRef = useRef([]);
     const navigate = useNavigate();
 
-    const BASE_URL = "https://scavenger-backend.onrender.com";
+    const BASE_URL = "http://bore.pub:10484";
 
     axios.defaults.withCredentials = true;
 

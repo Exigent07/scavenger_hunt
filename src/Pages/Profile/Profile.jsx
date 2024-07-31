@@ -13,7 +13,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get('https://scavenger-backend.onrender.com/api/profile', { withCredentials: true });
+                const response = await axios.get('http://bore.pub:10484/api/profile', { withCredentials: true });
                 setProfile(response.data);
             } catch (err) {
                 setError('Failed to fetch profile');
@@ -32,7 +32,7 @@ const Profile = () => {
 
     const handleLogout = async () => {
         try {
-            await axios.post('https://scavenger-backend.onrender.com/api/logout', {}, { withCredentials: true });
+            await axios.post('http://bore.pub:10484/api/logout', {}, { withCredentials: true });
             toast.success("Logged out Successfully!");
             navigate('/');
         } catch (err) {

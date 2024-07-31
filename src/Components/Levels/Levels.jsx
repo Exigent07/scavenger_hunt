@@ -14,7 +14,7 @@ function Levels() {
     const [hint, setHint] = useState('');
     const [levels, setLevels] = useState([]);
 
-    const BASE_URL = "https://scavenger-backend.onrender.com";
+    const BASE_URL = "http://bore.pub:10484";
     const POLL_INTERVAL = 1000;
 
     useEffect(() => {
