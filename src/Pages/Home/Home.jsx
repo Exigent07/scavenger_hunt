@@ -33,7 +33,7 @@ function Home() {
     useEffect(() => {
         navigate(window.location + "?code2=ZW5pZ21hdGlj")
         checkSession();
-    }, []);
+    }, [navigate]);
 
     if (loading) return <div>Loading...</div>;
 
